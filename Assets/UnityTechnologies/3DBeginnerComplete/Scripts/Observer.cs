@@ -7,7 +7,7 @@ public class Observer : MonoBehaviour
     public Transform player;
     public GameEnding gameEnding;
 
-    bool m_IsPlayerInRange;
+    public bool m_IsPlayerInRange;
 
     void OnTriggerEnter (Collider other)
     {
@@ -27,7 +27,7 @@ public class Observer : MonoBehaviour
 
     void Update ()
     {
-        if (m_IsPlayerInRange)
+        /*if (m_IsPlayerInRange)
         {
             Vector3 direction = player.position - transform.position + Vector3.up;
             Ray ray = new Ray(transform.position, direction);
@@ -40,6 +40,6 @@ public class Observer : MonoBehaviour
                     gameEnding.CaughtPlayer ();
                 }
             }
-        }
+        }*/
     }
 }
