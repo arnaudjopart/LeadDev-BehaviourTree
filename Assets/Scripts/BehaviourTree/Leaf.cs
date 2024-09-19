@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-public class Leaf : Node
+﻿public class Leaf : Node
 {
     private IStrategy m_stategy;
 
@@ -18,26 +16,5 @@ public class Leaf : Node
     {
         base.Reset();
         m_stategy.Reset();
-    }
-}
-
-internal class TellSomethingStrategy : IStrategy
-{
-    private string m_text;
-
-    public TellSomethingStrategy(string v)
-    {
-        this.m_text = v;
-    }
-
-    public Node.STATUS Process(float deltaTime)
-    {
-        Debug.Log(m_text);
-        return Node.STATUS.SUCCESS;
-    }
-
-    public void Reset()
-    {
-        
     }
 }
